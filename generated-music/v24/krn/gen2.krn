@@ -1,0 +1,48 @@
+!!!COM: LIMuse
+!!!OTL: Fragment
+**kern	**kern	**kern	**kern	**kern	**kern	
+*staff1	*staff2	*staff3	*staff4	*staff5	*staff6	
+*Ipiano	*Ipiano	*Ipiano	*Ipiano	*Ipiano	*Ipiano	
+*clefF4	*clefG2	*clefG2	*clefG2	*clefG2	*clefG2	
+*k[]		*k[]		*k[]		*k[]		*k[]		*k[]		
+*M4/4		*M4/4		*M4/4		*M4/4		*M4/4		*M4/4
+*MM80		*MM80		*MM80		*MM80		*MM80		*MM80
+=1-	=1-	=1-	=1-	=1-	=1-
+.	.	4a-'/	.	.	.
+.	.	4a-'/	.	.	.
+.	.	4f'/	.	.	.
+=2	=2	=2	=2	=2	=2	
+1r	.	4a-'/	.	.	.
+.	.	4cc'\	.	.	.
+.	.	4ff'\	.	.	.
+=3	=3	=3	=3	=3	=3	
+4r	.	(4.bb-\	.	.	.
+4G\ 4B-\ 4d\	.	.	.
+.	.	24aa\LL	.	.	.
+.	.	24gg\	.	.	.
+.	.	24ff#\JJ	.	.
+4G\ 4B-\ 4c\	.	4gg'\)	.
+4G\ 4B-\ 4e\	.	4gg'\	.
+=4	=4	=4	=4	=4	=4	
+.	.	(aq/	.
+4F#\ 4A\ 4c\	.	(4aa'\)	p
+4F#'\ 4A'\ 4c'\	.	4.aa\)	.
+4F#'\ 4A'\ 4c'\	.	.	.
+.	.	(8aa\L	.
+4G'\ 4B'\ 4d'\	.	8gg\	.
+.	.	8ff#\J)	.
+=5	=5	=5	=5	=5	=5	
+*	*	*^	*
+4C'\	.	4r	2.cc\	.
+4D'\ 4d'\	.	.	.	.
+4D'\ 4d'\	.	(8dd/L	.	.
+.	.	8cc#/J	.	.
+=6	=6	=6	=6	=6	=6	
+4D'\ 4d'\	.	8dd/L	4r	.
+.	.	8ee/J	.	.
+4D\ 4d\	.	4ff#/	4cc\	.
+4DD\ 4D\)	.	4ff#/)	4a\	.
+*	*	*v	*v	*
+== == == == == == 
+*- *- *- *- *- *- 
+EOF

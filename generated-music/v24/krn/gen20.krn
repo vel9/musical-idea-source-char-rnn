@@ -1,0 +1,132 @@
+!!!COM: LIMuse
+!!!OTL: Fragment
+**kern	**kern	**kern	**kern	**kern	
+*staff1	*staff2	*staff3	*staff4	*staff5	
+*Ipiano	*Ipiano	*Ipiano	*Ipiano	*Ipiano	
+*clefF4	*clefG2	*clefG2	*clefG2	*clefG2	
+*k[]		*k[]		*k[]		*k[]		*k[]		
+*M4/8		*M4/8		*M4/8		*M4/8		*M4/8		
+*MM80		*MM80		*MM80		*MM80		*MM80		
+=1	=1	=1	=1	=1	
+1r	.	4f'/	.
+.	.	4a-'/	.
+.	.	4b-'/	.
+.	.	4f'/	.
+=2	=2	=2	=2	=2	
+4r	.	4f'/	.
+4r	.	4r	.
+4F'\ 4A-'\ 4c'\	.	4a-'/	.
+=3	=3	=3	=3	=3	
+4r	.	4bb-'\	.
+4D'\ 4G'\ 4B-'\	.	4bb-'\	.
+4r	.	4gg'\	.
+=4	=4	=4	=4	=4	
+4En'\ 4G'\ 4B-'\ 4e'\	.	4gg'\
+.	4r	.
+4E-'\ 4G'\ 4B-'\ 4e'\	.	4gg'\	.
+.r	.	.
+=5	=5	=5	=5	=5	
+4FF'/ 4AA-'/ 4C'/ 4F'/	.	.
+4r	.	.
+4r	.	.
+4r	.	.
+=6	=6	=6	=6	=6	
+4r	.	.
+4F'\ 4A-'\ 4c'\	.	4r
+4r	.	.
+=7	=7	=7	=7	=7	
+4F'\ 4A-'\ 4c'\	.	4.aa-\	.
+4r	.	.	.
+.	.	16b-/LL	.
+.	.	16a-/	.
+8C'\ 8c'\	.	16f/	.
+.	.	16ee-/JJ	.
+=8	=8	=8	=8	=8	
+4F'\ 4A-'\ 4c'\	.	16f/LL	.
+.	.	16f/	.
+.	.	16a-/	.
+.	.	16cc/JJ	.
+4r	.	16ff\LL	p
+.	.	16aa-\	.
+.	.	16ccc\	.
+.	.	16bb-\JJ	.
+8r	.	4aa-'\	.
+8F'\ 8A-'\ 8c'\	.	.	.
+=9	=9	=9	=9	=9	
+8F'\ 8B-'\ 8c'\ 8e-'\	.	8aa'\	.
+8r	.	8r	.
+8FF'/ 8AA-'/ 8C'/ 8F'/	.	16ff\LL	ff
+.	.	16fff\	.
+8r	.	16eee-\	.
+.	.	16dddn\JJ	.
+=10	=10	=10	=10	=10	
+4r	.	16ccc\LL	.
+.	.	16bb-\	.
+.	.	16aa-\	.
+.	.	16gg\JJ	.
+16r	.	16ff\LL	.
+16FF\ 16A-\LL	.	16ee-\	.
+16A-\ 16c\	.	16ff\	.
+16A-\ 16c\JJ	.	16aa-\JJ	.
+16F#\ 16A\LL	.	16ccc\LL	.
+16F#\ 16A\	.	16ccc\	.
+16F#\ 16A\	.	16ddd\	.
+16F#\ 16A\JJ	.	16ddd\JJ	.
+=11	=11	=11	=11	=11	
+16G	\ 16G\LL	.	16eee-\LL	.
+16F#\ 16A\	.	16ddd\	.
+16B-\ 16d\	.	16ddd\	.
+16B-\ 16d\JJ	.	16bb\JJ	.
+16F#\ 16A\LL	.	16ddd\LL	.
+16F#\ 16A\ 16d\	.	16aaa-\	.
+16F#\ 16A\ 16d\	.	16ggg\	.
+16F#\ 16A\JJ	.	16aa\JJ	.
+=12	=12	=12	=12	=12	
+16F#\ 16A\ 16d\LL	.	16aa#\LL	.
+16F#\ 16A\	.	16bb\	.
+16F#\ 16A\	.	16ccc#\	.
+16F#\ 16A\JJ	.	16ddd#\JJ	.
+16F#\ 16A\LL	.	16ccc#\LL	.
+16F#\ 16A\	.	16ddd#\	.
+16F#\ 16A\	.	16ccc#\	.
+16F#\ 16A\JJ	.	16ddd#\JJ	.
+16F#\ 16G#\LL	.	16eee#\LL	.
+16G#\ 16B\	.	16ddd#\	.
+16F#\ 16A\	.	16ccc#\	.
+16F#\JJ	.	16ddd#\JJ	.
+=13	=13	=13	=13	=13	
+16GG#\LL	.	16ee#\LL	.
+16G#\	.	16ee#\	.
+16G\	.	16ee\	.
+16G#\JJ	.	16dd#\JJ	.
+16F#\LL	.	16ee#\LL	.
+16A#\	.	16dd#\	.
+16A\	.	16cc#\	.
+16A\JJ	.	16dd#\JJ	.
+16A\LL	.	16ee#\LL	.
+16G#\	.	16dd#\	.
+16G\	.	16ee\	.
+16E\JJ	.	16dd#\JJ	.
+=14	=14	=14	=14	=14	
+16E\LL	.	16ee\LL	.
+16G#\	.	16b\	.
+16G\	.	16ee\	.
+16e\JJ	.	16ccJJJ	.
+16E\LL	.	16b\LL	.
+16B\	.	16cc\	.
+16G\	.	16b\	.
+16B\JJ	.	16ee\JJ	.
+16E\LL	.	16ee\LL	.
+16B\	.	16b\	.
+16B\	.	16gg\	.
+16B\JJ	.	16ee\JJ	.
+16E\LL	.	16dd#\LL	.
+16B\	.	16ee\	.
+16G\	.	16ee\	.
+16e\JJ	.	16dd#\JJ	.
+16E\LL	.	16ee\LL	.
+16B\	.	16dd#\	.
+16B\	.	16ee\	.
+== == == == == 
+*- *- *- *- *- 
+EOF
