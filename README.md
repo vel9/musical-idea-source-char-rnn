@@ -1,27 +1,26 @@
-#Endless Source of Musical Ideas
+# RNN: An Endless Source of Musical Ideas
 
-Please make sure to read the detailed description for this project at:
-http://vel9.com/variations/variations.html
+Please make sure to read the [detailed description](http://vel9.com/variations/variations.html) for this project which also provides the musical results and explains the approach.
+
+I've expanded on one of the assignments in Udacity's Deep Learning Foundations nanodegree, by training the RNN on music compositions in **kern format.
 
 Resources: 
 -----------
-Original model: 
-  https://github.com/udacity/deep-learning/tree/master/intro-to-rnns
-Original model inspired by Karpathy's Character RNN: 
-  http://karpathy.github.io/2015/05/21/rnn-effectiveness/ 
-Original approach which used **kern format for training: 
-  http://www.wise.io/tech/asking-rnn-and-ltsm-what-would-mozart-write
+* Original RNN model: https://github.com/udacity/deep-learning/tree/master/intro-to-rnns
+* Karpathy's Character RNN: http://karpathy.github.io/2015/05/21/rnn-effectiveness/ 
+* Original approach which used **kern format for training: http://www.wise.io/tech/asking-rnn-and-ltsm-what-would-mozart-write
 
-Additional citations are provided within the files themselves
-------------
+Additional citations are provided within the code itself, and in the detailed project description provided above.
 
-Set up the environment: 
+*The trained tensorflow checkpoint is too large to be uploaded directly to GitHub and I'm currently exploring ways to provide that.*
 
-'''conda env create -f environment.yml'''
+Set up the environment:
 
-Use the pre-trained checkpoint to sample from the rnn with: 
+```conda env create -f environment.yml```
 
-'''python generate.py'''
+Use a pre-trained checkpoint to sample from the rnn with: 
 
-To quickly listen to what's been generated, grab the gen*.xml file
-and upload it to the great musicxml viewer at https://www.soundslice.com/musicxml-viewer/
+```python generate.py```
+
+To quickly check out what's been generated, grab the gen*.xml file
+and upload it to the very cool [Soundslice musicxml] viewer(https://www.soundslice.com/musicxml-viewer/) 
