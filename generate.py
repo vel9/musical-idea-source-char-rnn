@@ -8,6 +8,7 @@ from sample import sample_checkpoint
 from music21.humdrum.spineParser import SpineLine
 
 GENERETED_FILES_DIR = "generated-music"
+GENERATED_FILE_PREFIX = "gen"
 CHECKPOINTS_DIR = "checkpoints"
 
 def should_count_spines(line):
@@ -144,6 +145,21 @@ def generate_files(raw_krn_content, output_krn_filename, output_midi_filename, o
 	generate_midi(m, output_midi_filename)
 	generate_xml(m, output_xml_filename)
 
+def get_next_file_num(output_krn_dir):
+	"""
+	Scans each file in the output directory and returns the next in sequence
+	If gen36.krn is the last file to be generated in the directory, 
+	the following will return 37
+	"""
+	max_file_num = 1
+	for file_name in os.listdir(output_krn_dir):
+		period_idx = file_name.index(".")
+		file_num = file_name[len(GENERATED_FILE_PREFIX):period_idx]
+		if (file_num.isdigit()):
+			max_file_num = max(max_file_num, int(file_num))
+
+	return str(max_file_num + 1)
+
 def generate(model_version, checkpoint_name, num_chars, lstm_size, prime=config.MEASURE_SYMBOL):
 	"""
 	Sample the RNN by providing a path to an existing checkpoint
@@ -155,7 +171,7 @@ def generate(model_version, checkpoint_name, num_chars, lstm_size, prime=config.
 	output_xml_dir = generated_dir + "/xml"
 	
 	# count the number of files in director and add one 
-	output_base_filename = "gen" + str(len(os.listdir(output_krn_dir)) + 1)
+	output_base_filename = GENERATED_FILE_PREFIX + get_next_file_num(output_krn_dir)
 
 	output_krn_filename = output_krn_dir + "/" + output_base_filename + ".krn"
 	output_midi_filename = output_midi_dir + "/" + output_base_filename + ".mid"
