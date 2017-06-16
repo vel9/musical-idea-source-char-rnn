@@ -12,15 +12,20 @@ Resources:
 
 Additional citations are provided within the code itself, and in the detailed project description provided above.
 
-*The trained tensorflow checkpoint is too large to be uploaded directly to GitHub and I'm currently exploring ways to provide that.*
-
 Set up the environment:
 
 ```conda env create -f environment.yml```
 
-Use a pre-trained checkpoint to sample from the rnn with: 
+Activate environment: 
+
+```source activate muse```
+
+Use the v24 pre-trained checkpoint to sample from the rnn with: 
 
 ```python generate.py```
 
 To quickly check out what's been generated, grab the gen*.xml file
-and upload it to the very cool [Soundslice musicxml] viewer(https://www.soundslice.com/musicxml-viewer/) 
+and upload it to the very cool [Soundslice musicxml viewer](https://www.soundslice.com/musicxml-viewer/) 
+
+If you want to try and improve on the model, or generate fragments of different lengths, 
+or provide a different prime event, make sure to play around with the params ```config.py```
