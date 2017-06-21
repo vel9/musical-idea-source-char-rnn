@@ -160,6 +160,14 @@ def get_next_file_num(output_krn_dir):
 
     return str(max_file_num + 1)
 
+def ensure_output_directory_exists(directory):
+    """
+    Creates output directory if it does not exist
+    ref: https://stackoverflow.com/a/273227
+    """
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
 def generate(model_version, checkpoint_name, num_chars, lstm_size, prime=config.MEASURE_SYMBOL):
     """
     Sample the RNN by providing a path to an existing checkpoint
@@ -167,8 +175,13 @@ def generate(model_version, checkpoint_name, num_chars, lstm_size, prime=config.
     """
     generated_dir = GENERETED_FILES_DIR + "/" + model_version
     output_krn_dir = generated_dir + "/krn"
+    ensure_output_directory_exists(output_krn_dir)
+
     output_midi_dir = generated_dir + "/midi"
+    ensure_output_directory_exists(output_midi_dir)
+
     output_xml_dir = generated_dir + "/xml"
+    ensure_output_directory_exists(output_xml_dir)
 	
 	# count the number of files in director and add one 
     output_base_filename = GENERATED_FILE_PREFIX + get_next_file_num(output_krn_dir)
@@ -178,7 +191,7 @@ def generate(model_version, checkpoint_name, num_chars, lstm_size, prime=config.
     output_xml_filename = output_xml_dir + "/" + output_base_filename + ".xml"
     checkpoint_dir = CHECKPOINTS_DIR + "/" + model_version
 
-    print("sampling from model, and generating new music, base file name {}: ".format(output_base_filename))
+    print("sampling from model, and generating new music, base file name: {}".format(output_base_filename))
     raw_krn_content = sample_checkpoint(checkpoint_dir, checkpoint_name, num_chars, lstm_size, prime)
     generate_files(raw_krn_content, output_krn_filename, output_midi_filename, output_xml_filename)
 	
