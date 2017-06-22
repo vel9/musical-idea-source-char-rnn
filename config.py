@@ -13,9 +13,11 @@ EPOCHS = 60
 """
 Sampling: params for sampling the model
 """
-OUTPUT_LENGTH = 1000
+OUTPUT_LENGTH = 5000
 MODEL_VERSION = "v24"
 CHECKPOINT_NAME = "trained.ckpt"
-PRIME_EVENT = "@\n.\t.\t2a/\t.\n"
+PRIME_EVENT = "@\n.\t8ee-/L\n"
+#Picks one of top_n most likely next characters
+PICK_TOP_N = 5
 
 MEASURE_SYMBOL = "@"
