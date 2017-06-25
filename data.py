@@ -1,18 +1,18 @@
 import glob
+import os.path
 import numpy as np
 import _pickle as pickle
-
+import config
 from pathlib import Path
+from collections import Counter
+from kernhelper import determine_num_voices, should_count_spines, contains_illegal_operations
 
 VOCAB_FILE_NAME = "vocab.p"
 VOCAB_TO_INT_FILE_NAME = "vocab_to_int.p"
 INT_TO_VOCAB_FILE_NAME = "int_to_vocab.p"
 ENCODED_VOCAB_FILE_NAME = "encoded.p"
-DATASET_DIR = "dataset"
-DATASET_FILENAME = "music.txt"
-# Provide list of composers whose music we'll be processing into the training data
-COMPOSERS = ["beethoven", "chopin", "haydn", "mozart", "prokofiev",
-"ravel", "scarlatti","schubert","scriabin"]
+DATASET_DIR = "dataset/monophonic"
+DATASET_FILENAME = "music-data.txt"
 
 def get_output_dir(args):
     """
@@ -120,6 +120,42 @@ def process(text, output_dir):
     encoded = generate_encoded(output_dir, vocab_to_int, text)
     return vocab, vocab_to_int, int_to_vocab, encoded
 
+def collect_krn_files(root_dir):
+    """
+    Collects all krn files from the provided directory
+    """
+    compositions = []
+    traverse(root_dir, compositions, ".krn")
+    return compositions
+
+def traverse(node, compositions, file_extension):
+    """
+    Recursively traverses all nodes of file tree, 
+    Searching for files which end with the provided file_extension
+    Adds each found file to "compositions"
+    """
+    if (os.path.isfile(node)):
+       if (node[-len(file_extension):] == file_extension):
+           compositions.append(node)
+       return
+
+    for file in os.listdir(node):
+        child_dir = node + "/" + file
+        krn_files = traverse(child_dir, compositions, file_extension)
+        if (krn_files is not None):
+            compositions.append(krn_files)
+
+def readlines(file_path):
+    """
+    Reads file from file-system, returns None if it encounters
+    an exception (such as an encoding problme) 
+    """
+    try:
+        return open(file_path, "r").readlines()
+    except (IOError, UnicodeDecodeError) as e:
+        return None
+        print("Error reading file: {}, e: {}".format(composition, e))
+
 def generate_data(output_dir):
     """
     Processing code primarily adopted from: 
@@ -147,25 +183,45 @@ def generate_data(output_dir):
     comp_txt = open(dataset_file_name, "w")
     # ref: http://www.wise.io/tech/asking-rnn-and-ltsm-what-would-mozart-write
     # get the top directory ites
-    for composer in COMPOSERS:
-        compositions = glob.glob(dataset_dir + "/{composer}/*.krn".format(composer=composer))
-        for composition in compositions:
-            lines = open(composition, "r").readlines()
-            out = []
-            found_first_measure = False
-            for l in lines:
-                if l.startswith("="):
-                    out.append(config.MEASURE_SYMBOL + "\n")
-                    found_first_measure = True
-                    continue
-                if not found_first_measure or l.startswith("!"):
-                    ## skip line until we find the end of the header and metadata
-                    ## and ignore comments
-                    continue
-                out.append(l)
+    counter = Counter()
+    compositions = collect_krn_files(dataset_dir)
+    for composition in compositions:
+        lines = readlines(composition)
+        if (lines is None):
+            continue
+
+        out = []
+        found_first_measure = False
+        for l in lines:
+            if l.startswith("="):
+                out.append(config.MEASURE_SYMBOL + "\n")
+                found_first_measure = True
+                continue
+            if not found_first_measure or l.startswith("!"):
+                ## skip line until we find the end of the header and metadata
+                ## and ignore comments
+                continue
+            out.append(l)
+
+        num_voices = determine_num_voices(out)
+        counter[num_voices] += 1
+        # Distribution of number of voices per file
+        # [(4, 634), (5, 261), (6, 101), 
+        # (3, 93), (8, 72), (7, 56), 
+        # (2, 45), (1, 19), (0, 19), 
+        # (12, 3), (10, 1), (18, 1)]
+        # strip some outliers
+        # my intution is that the greater number of voices
+        # the worse the model will predict sigle-voice melodies
+        if (num_voices == 1):
             comp_txt.writelines(out)
+
+    print("distribution of number of voices across number of files: {}".format(str(counter.most_common())))
     comp_txt.close()
 
     with open(dataset_file_name, "r") as f:
         text = f.read()
     return process(text, output_dir)
+
+if __name__ == "__main__":
+    generate_data("dataset")

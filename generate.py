@@ -6,32 +6,11 @@ from music21 import converter
 from shutil import copyfile
 from sample import sample_checkpoint
 from music21.humdrum.spineParser import SpineLine
+from kernhelper import determine_num_voices, should_count_spines, contains_illegal_operations
 
 GENERETED_FILES_DIR = "generated-music"
 GENERATED_FILE_PREFIX = "gen"
 CHECKPOINTS_DIR = "checkpoints"
-
-def should_count_spines(line):
-    """
-    Returns true if number of spines should be counted for current line
-    """
-    return line != "" and line != config.MEASURE_SYMBOL
-
-def determine_num_voices(kern_content):
-    """
-    Determines the number of voices present in the generated **kern file
-    by scanning each line and determining number of vocies in current line
-    relies on music21.humdrum.spineParser.SpineLine class
-    """
-    max_voices = 0
-    line_num = 0
-    for line in kern_content.splitlines():
-        line = line.rstrip() #right strip
-        if (should_count_spines(line)):
-            spine_line = SpineLine(line_num, line)
-            max_voices = max(max_voices, spine_line.numSpines)
-        line_num += 1
-    return max_voices
 
 def preprocess(kern_content, max_voices):
     """
@@ -79,17 +58,6 @@ def copy_append_staff(num_copies):
         value += "*staff{}\t".format(str(i + 1))
     return value
 
-def contains_illegal_operations(line):
-    """
-    Determines if current line contains operations
-    which would likely stump the parsing process, 
-	
-    More on "Interpretation" lines in **kern: http://www.humdrum.org/guide/ch05/
-
-    ref: http://stackoverflow.com/a/3437070
-    """
-    return "*" in line or "v" in line
-
 def generate_krn(kern_content, output_file_name):
     """
     Generates the metadata needed to successfully parse the 
@@ -99,7 +67,7 @@ def generate_krn(kern_content, output_file_name):
     http://www.wise.io/tech/asking-rnn-and-ltsm-what-would-mozart-write
     """
     r = []
-    num_voices = determine_num_voices(kern_content)
+    num_voices = determine_num_voices(kern_content.splitlines())
     kern_content = preprocess(kern_content, num_voices)
     print("number of voices in generated file: {}".format(num_voices))
     r.append("!!!COM: LIMuse\n")
