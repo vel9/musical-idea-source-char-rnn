@@ -141,9 +141,7 @@ def traverse(node, compositions, file_extension):
 
     for file in os.listdir(node):
         child_dir = node + "/" + file
-        krn_files = traverse(child_dir, compositions, file_extension)
-        if (krn_files is not None):
-            compositions.append(krn_files)
+        traverse(child_dir, compositions, file_extension)
 
 def readlines(file_path):
     """
