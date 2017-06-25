@@ -20,7 +20,7 @@ from model import get_batches
 from model import CharRNN
 from data import read_processed_data
 
-def pick_top_n(preds, vocab_size, top_n=5):
+def pick_top_n(preds, vocab_size, top_n=config.PICK_TOP_N):
     """
     Picks one of top_n most likely next characters, 
     Random selection step is provided with the actual
