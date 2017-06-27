@@ -214,7 +214,7 @@ def generate_data(output_dir):
         if (num_voices == 1):
             comp_txt.writelines(out)
 
-    print("distribution of number of voices across number of files: {}".format(str(counter.most_common())))
+    print("distribution of number of voices across number of files: {}".format(counter.most_common()))
     comp_txt.close()
 
     with open(dataset_file_name, "r") as f:
