@@ -43,6 +43,9 @@ def copy_append(value_to_append, num_copies):
     """
     Copies and appends a value to itself num_copies times
     """
+    if (num_copies < 1):
+        return ""
+
     value = value_to_append
     for i in range(1, num_copies):
         value += value_to_append
@@ -75,7 +78,10 @@ def generate_krn(kern_content, output_file_name):
     r.append(copy_append("**kern\t", num_voices) + "\n")
     r.append(copy_append_staff(num_voices) + "\n")
     r.append(copy_append("*Ipiano\t", num_voices) + "\n")
-    r.append(copy_append("*clefF4\t", 1) + copy_append("*clefG2\t", num_voices - 1) + "\n")
+    if (num_voices == 1):
+        r.append("*clefG2\n")
+    else:
+        r.append(copy_append("*clefF4\t", 1) + copy_append("*clefG2\t", num_voices - 1) + "\n")
     r.append(copy_append("*k[]\t\t", num_voices) + "\n")
     r.append(copy_append("*M4/8\t\t", num_voices) + "\n")
     r.append(copy_append("*MM80\t\t", num_voices) + "\n")
