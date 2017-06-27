@@ -1,4 +1,6 @@
 __pycache__
 .floydexpt
 .DS_Store
-/dataset
+/dataset/monophonic
+/dataset/local
+music-data.txt
