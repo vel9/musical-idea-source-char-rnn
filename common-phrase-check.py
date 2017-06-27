@@ -1,10 +1,19 @@
-
+# Algorithm for gettting some insight into how much a given 
+# generated sequence has in common with the dataset the model
+# was trained on.
+#
+# Designed for use with the model (v25) trained on monophonic data
+# 
+# The analysis can be executed for a single generated sequence 
+# or for directory of generated sequences
+#
 import os.path
 from data import collect_krn_files
 
 DATASET_DIR = "dataset/monophonic"
-MIN_SEQ_LENGTH = 20 # length of 20 represents ~5 notes
-MAX_SEQ_LENGTH = 40
+MIN_SEQ_LENGTH = 10 # characters
+MAX_SEQ_LENGTH = 40 # characters
+NOTES_IN_SEQ = 5
 
 def read_file(file_path):
     """
@@ -23,6 +32,23 @@ def is_valid_sequence_start(text, i):
     and the next character is NOT a number
     """
     return i > 0 and (text[i].isdigit() and not text[i - 1].isdigit())
+
+def get_num_notes(note_sequences):
+    """
+    Returns number of notes in given sequence
+    """
+    return len(note_sequences.splitlines()) 
+
+def is_valid_sequence_end(text, i, j):
+    """
+    Valid sequences are ones which start with a number
+    and the next character is NOT a number
+    """
+    if text[j] == "\n":
+        substring_to_check = text[i:j]
+        return get_num_notes(substring_to_check) >= NOTES_IN_SEQ
+
+    return False
 
 def analyze_common_sequences(krn_file):
     """
@@ -55,6 +81,9 @@ def analyze_common_sequences(krn_file):
             jstart = i + MIN_SEQ_LENGTH
             jend = min(i + MAX_SEQ_LENGTH, text_len)
             for j in reversed(range(jstart, jend)):
+                if (not is_valid_sequence_end(text, i, j)):
+                    continue
+
                 substring_to_check = text[i:j]
                 if substring_to_check in already_checked:
                     print("already checked {}".format(substring_to_check))
@@ -63,7 +92,7 @@ def analyze_common_sequences(krn_file):
                 if substring_to_check in composition: 
                     already_checked[substring_to_check] = True
                     print("found sequence, len: {}\n{}\n"
-                                .format(str(len(substring_to_check)), substring_to_check))
+                                .format(str(get_num_notes(substring_to_check)), substring_to_check))
                     counter += 1
                     break
 
@@ -89,6 +118,7 @@ def analyze_common_sequences_dir(kern_files_to_check_dir):
         analyze_common_sequences(kern_files_to_check_dir + "/" + file)
 
 if __name__ == "__main__":
-    analyze_common_sequences_dir("generated-music/v25/krn")
+    #analyze_common_sequences_dir("generated-music/v25/krn")
+    analyze_common_sequences("generated-music/v25/krn/gen2.krn")
 
 
