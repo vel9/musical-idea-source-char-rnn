@@ -1,0 +1,859 @@
+common sequence report: 
+
+Looking for sequences of 5 notes or greater
+
+****
+checking generated-music/v25/krn/gen10.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+4b
+8b
+8b
+4b
+4b
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/ballad/deut3596.krn: 1
+---
+found sequence, len: 5
+4b
+8b
+8b
+4b
+4b
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1762.krn: 1
+---
+found sequence, len: 5
+4b
+8g
+8g
+8f#
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut2081.krn: 1
+---
+found sequence, len: 5
+8a
+8a
+8a
+4dd
+4r}
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/fink/deut195.krn: 1
+---
+found sequence, len: 5
+4b
+8g
+8g
+8f#
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut5108.krn: 1
+---
+found sequence, len: 5
+4b
+8g
+8g
+8f#
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/oesterrh/oestr063.krn: 1
+---
+total common sequences: 6
+****
+
+****
+checking generated-music/v25/krn/gen11.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+4b-
+8b-
+8a
+8g
+8f
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/boehme/deut2785.krn: 1
+---
+total common sequences: 1
+****
+
+****
+checking generated-music/v25/krn/gen2.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+4b-
+4cc
+4dd
+8cc
+8b-
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0671.krn: 1
+---
+found sequence, len: 5
+8a
+8dd
+8dd
+8cc
+8cc
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0966.krn: 1
+---
+total common sequences: 2
+****
+
+****
+checking generated-music/v25/krn/gen3.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/shanxi/shanx641.krn: 1
+---
+found sequence, len: 6
+4.cc
+8a
+8dd
+8cc
+8b-
+8cc
+
+found sequence, len: 5
+8a
+8dd
+8cc
+8b-
+8cc
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/allerkbd/deut3718.krn: 2
+---
+found sequence, len: 5
+4.cc
+8a
+8dd
+8cc
+8b-
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/allerkbd/deut3760.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/ballad/deut3514.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/boehme/deut2304.krn: 1
+---
+found sequence, len: 5
+4.cc
+8a
+8dd
+8cc
+8b-
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/boehme/deut2592.krn: 1
+---
+found sequence, len: 5
+4.cc
+8a
+8dd
+8cc
+8b-
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/dva/deut4435.krn: 1
+---
+found sequence, len: 5
+4.cc
+8a
+8dd
+8cc
+8b-
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0708.krn: 1
+---
+found sequence, len: 6
+4.cc
+8a
+8dd
+8cc
+8b-
+8cc
+
+found sequence, len: 5
+8a
+8dd
+8cc
+8b-
+8cc
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1332.krn: 2
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1762.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut2004.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut2038.krn: 1
+---
+found sequence, len: 5
+4.cc
+8a
+8dd
+8cc
+8b-
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/fink/deut001.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/fink/deut327.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/fink/deut564.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4595.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4659.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/lothring/lothr020.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/lothring/lothr029.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/sverige/sverig01.krn: 1
+---
+found sequence, len: 5
+8b
+8a
+8g
+8f#
+8e
+
+number of common sequences in dataset/monophonic/essen/europa/europa/ukraina/ukrain09.krn: 1
+---
+found sequence, len: 5
+8d
+8d
+8d
+8d
+8d
+
+number of common sequences in dataset/monophonic/foster/fostr11.krn: 1
+---
+found sequence, len: 5
+8d
+8d
+8d
+8d
+8d
+
+number of common sequences in dataset/monophonic/nova/nova134.krn: 1
+---
+found sequence, len: 5
+8g
+8f#
+8e
+8d
+4B}
+
+number of common sequences in dataset/monophonic/sagrillo/scotland/HA020.krn: 1
+---
+found sequence, len: 7
+8g
+8f#
+8e
+8d
+4B}
+{8A
+8B
+
+found sequence, len: 6
+8f#
+8e
+8d
+4B}
+{8A
+8B
+
+found sequence, len: 5
+8e
+8d
+4B}
+{8A
+8B
+
+number of common sequences in dataset/monophonic/sagrillo/scotland/HA025.krn: 3
+---
+found sequence, len: 6
+8f#
+8e
+8d
+4B}
+{8A
+8B
+
+found sequence, len: 5
+8e
+8d
+4B}
+{8A
+8B
+
+number of common sequences in dataset/monophonic/sagrillo/scotland/HA040.krn: 2
+---
+total common sequences: 31
+****
+
+****
+checking generated-music/v25/krn/gen4.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+8a
+8dd
+8dd
+8cc
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1258.krn: 1
+---
+found sequence, len: 5
+8a
+8dd
+8dd
+8cc
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/fink/deut038.krn: 1
+---
+total common sequences: 2
+****
+
+****
+checking generated-music/v25/krn/gen5.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+8cc
+8dd
+8cc
+8b-
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1352.krn: 1
+---
+found sequence, len: 5
+8cc
+8dd
+8cc
+8b-
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/romania/romani25.krn: 1
+---
+total common sequences: 2
+****
+
+****
+checking generated-music/v25/krn/gen6.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/african/xhosa17.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/han/han0478.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/han/han0526.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/han/han0966.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/essen/asia/natmin/natmn075.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/shanxi/shanx173.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/shanxi/shanx241.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/shanxi/shanx372.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/shanxi/shanx377.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/shanxi/shanx394.krn: 1
+---
+found sequence, len: 5
+16a
+16b
+16a
+16g
+8e
+
+number of common sequences in dataset/monophonic/essen/asia/shanxi/shanx399.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/ballad/deut2981.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/boehme/deut2340.krn: 1
+---
+found sequence, len: 6
+8g
+8g
+8g
+8g
+8a
+8g
+
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0614.krn: 2
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0620.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0844.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1009.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1744.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1745.krn: 1
+---
+found sequence, len: 5
+8cc
+8dd
+8cc
+8dd
+8cc
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1898.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1970.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut2037.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4535.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4657.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4722.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut5089.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8a
+8g
+4f
+
+number of common sequences in dataset/monophonic/essen/europa/europa/lothring/lothr001.krn: 1
+---
+found sequence, len: 5
+8g
+8g
+8g
+8g
+8a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/ukraina/ukrain06.krn: 1
+---
+found sequence, len: 5
+4cc#
+8b
+8a
+8f#
+8g#
+
+number of common sequences in dataset/monophonic/foster/fostr18.krn: 1
+---
+found sequence, len: 6
+8g
+8g
+8g
+8g
+8a
+8g
+
+found sequence, len: 5
+8g
+8g
+8g
+8a
+8g
+
+number of common sequences in dataset/monophonic/nova/nova018.krn: 2
+---
+total common sequences: 32
+****
+
+****
+checking generated-music/v25/krn/gen7.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/ballad/deut3514.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0599.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut0600.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1442.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1582.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1900.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8g
+4a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4702.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8g
+4a
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4782.krn: 1
+---
+found sequence, len: 5
+8g
+8b
+8dd
+8b
+8g
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/zuccal/deut4786.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/essen/europa/europa/lothring/lothr020.krn: 1
+---
+found sequence, len: 5
+8a
+8g
+8f#
+8e
+4d
+
+number of common sequences in dataset/monophonic/sagrillo/scotland/HA034.krn: 1
+---
+total common sequences: 11
+****
+
+****
+checking generated-music/v25/krn/gen8.krn for common phrases against dataset dataset/monophonic
+
+found sequence, len: 5
+4b
+8b
+8dd
+8cc
+8b
+
+number of common sequences in dataset/monophonic/essen/europa/europa/deutschl/erk/deut1144.krn: 1
+---
+found sequence, len: 5
+4b
+8b
+8dd
+8cc
+8b
+
+number of common sequences in dataset/monophonic/essen/europa/europa/oesterrh/oestr077.krn: 1
+---
+total common sequences: 2
+****
+
+****
+checking generated-music/v25/krn/gen9.krn for common phrases against dataset dataset/monophonic
+
+total common sequences: 0
+****
+
