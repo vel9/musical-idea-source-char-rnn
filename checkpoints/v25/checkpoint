@@ -1,0 +1,5 @@
+model_checkpoint_path: "/output/trained.ckpt"
+all_model_checkpoint_paths: "/output/i5000_l512.ckpt"
+all_model_checkpoint_paths: "/output/i10000_l512.ckpt"
+all_model_checkpoint_paths: "/output/i15000_l512.ckpt"
+all_model_checkpoint_paths: "/output/trained.ckpt"
