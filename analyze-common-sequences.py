@@ -11,25 +11,17 @@ import os.path
 from data import collect_krn_files
 
 DATASET_DIR = "dataset/monophonic"
-MIN_SEQ_LENGTH = 10 # characters
-MAX_SEQ_LENGTH = 40 # characters
+MIN_SEQ_LENGTH = 10 # in characters
+MAX_SEQ_LENGTH = 40 # in characters
 NOTES_IN_SEQ = 5
-
-def read_file(file_path):
-    """
-    Reads file from file-system, returns None if it encounters
-    an exception (such as an encoding problme) 
-    """
-    try:
-        return open(file_path, "r").read()
-    except (IOError, UnicodeDecodeError) as e:
-        #print("Error reading file: {}, e: {}".format(file_path, e))
-        return None
 
 def is_valid_sequence_start(text, i):
     """
-    Valid sequences are ones which start with a number
-    and the next character is NOT a number
+    Start of a valid sequence is one which begins with a numeric value
+    and is not preceeded with a numeric value. 
+
+    If rhythmic value is 16, we want to make sure the sequence starts
+    with a "1" and not the "6". 
     """
     return i > 0 and (text[i].isdigit() and not text[i - 1].isdigit())
 
@@ -41,14 +33,25 @@ def get_num_notes(note_sequences):
 
 def is_valid_sequence_end(text, i, j):
     """
-    Valid sequences are ones which start with a number
-    and the next character is NOT a number
+    A valid sequence ends with a newline character
+    and contins number of notes which are greater than
+    or equal to the value of NOTES_IN_SEQ
     """
     if text[j] == "\n":
         substring_to_check = text[i:j]
         return get_num_notes(substring_to_check) >= NOTES_IN_SEQ
 
     return False
+
+def read_file(file_path):
+    """
+    Reads file from file-system, returns None if it encounters
+    an exception (such as an encoding problme) 
+    """
+    try:
+        return open(file_path, "r").read()
+    except (IOError, UnicodeDecodeError) as e:
+        return None
 
 def analyze_common_sequences(krn_file):
     """
